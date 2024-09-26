@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions={
-    origin: 'https://job-portal-kohl-gamma.vercel.app',
+    origin: 'https://job-portal-kohl-gamma.vercel.app', 
+    methods: 'GET,POST,PUT,DELETE', 
+    allowedHeaders: 'Content-Type,Authorization',
     credentials:true
 }
 app.use(cors(corsOptions));
