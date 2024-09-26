@@ -13,7 +13,7 @@ dotenv.config({});
 const app =express();
 //middlewares
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions={
     origin: 'https://job-portal-kohl-gamma.vercel.app', 
